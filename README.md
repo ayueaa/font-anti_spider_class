@@ -1,5 +1,5 @@
 # font-anti_spider_class
-字体反反爬
+一个将字体反爬页面转换为正常编码响应的爬虫工具
 封装汽车之家、58同城、猫眼电影网站的字体反编码类
 传参response文本，返回替换正确字体后的新的response
 使用汽车之家类爬虫时需要基准字体文件autohome_standardFont.ttf支持
