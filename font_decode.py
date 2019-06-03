@@ -4,11 +4,13 @@ import requests
 import io
 import base64
 
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # 汽车之家字体加密反反爬
 class AutohomeFontMapping(object):
     def __init__(self, response):
         self.response = response
-        self.standard_font_obj = './autohome_standardFont.ttf'
+        self.standard_font_obj = os.path.join(BASE_DIR, 'autohome_standardFont.ttf')
 
         # 选定作为基准字体的Unicode编码和对应文字（使用FontCreator查看后手工输入）
         self.uni_tuple = (
@@ -166,7 +168,7 @@ class Fang58FontMapping(object):
 class MaoyanFontMapping(object):
     def __init__(self, response):
         self.response = response
-        self.standard_font_obj = './maoyan_standard_font.woff'
+        self.standard_font_obj = os.path.join(BASE_DIR, 'maoyan_standard_font.woff')
 
         # 选定作为基准字体的Unicode编码和对应文字（使用FontCreator查看后手工输入）
         self.uni_tuple = (
